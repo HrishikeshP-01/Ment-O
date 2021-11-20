@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogPlaced : MonoBehaviour
 {
+    public string selection;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class DialogPlaced : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        string selection = collision.GetComponent<DialogProperties>().dtype;
+        selection = collision.GetComponent<DialogProperties>().dtype;
         Debug.Log(selection);
         
     }
